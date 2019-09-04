@@ -14,6 +14,7 @@ public class Main
             }
         }
     }
+
     public static void main(String[] args)
     {
 
@@ -61,47 +62,48 @@ public class Main
         System.out.print("Descending Order - Years Named");
         myList.sort((v1,v2) -> v2.getYear() - v1.getYear());
         System.out.println(myList.toString());
+        myList.forEach((v) -> System.out.println(v.getId()));
 
-        //Alphabetic Order - Name
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Alphabetic Order - Name");
-        myList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
-        System.out.println(myList.toString());
+        // //Alphabetic Order - Name
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Alphabetic Order - Name");
+        // myList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        // System.out.println(myList.toString());
 
-        //Alphabetic Order - Move
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Alphabetic Order - Move");
-        myList.sort((v1,v2) -> v1.move().compareToIgnoreCase(v2.move()));
-        System.out.println(myList.toString());
+        // //Alphabetic Order - Move
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Alphabetic Order - Move");
+        // myList.sort((v1,v2) -> v1.move().compareToIgnoreCase(v2.move()));
+        // System.out.println(myList.toString());
 
-        //Animals breathe with lungs
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Animals breathe with lungs");
-        printAnimals(myList, v -> (v.breath()=="Lungs"));
-
-
-        //Animals breathe with lungs and named in 1758
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Animals breathe with lungs and named in 1758");
-        printAnimals(myList, v -> (v.breath()=="Lungs" && (v.getYear()==1758)));
+        // //Animals breathe with lungs
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Animals breathe with lungs");
+        // printAnimals(myList, v -> (v.breath()=="Lungs"));
 
 
-        //Animals breathe with lungs and lay eggs
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Animals breathe with lungs and lay eggs");
-        printAnimals(myList, v -> (v.breath()=="Lungs" && (v.reproduce()=="Eggs")));
+        // //Animals breathe with lungs and named in 1758
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Animals breathe with lungs and named in 1758");
+        // printAnimals(myList, v -> (v.breath()=="Lungs" && (v.getYear()==1758)));
 
-        //Alphabetic Order if born 1758
-        System.out.print(" ");
-        System.out.print("***");
-        System.out.print("Alphabetic Order if born 1758");
-        myList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
-        printAnimals(myList, v -> (v.getYear()==1758));
+
+        // //Animals breathe with lungs and lay eggs
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Animals breathe with lungs and lay eggs");
+        // printAnimals(myList, v -> (v.breath()=="Lungs" && (v.reproduce()=="Eggs")));
+
+        // //Alphabetic Order if born 1758
+        // System.out.print(" ");
+        // System.out.print("***");
+        // System.out.print("Alphabetic Order if born 1758");
+        // myList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        // printAnimals(myList, v -> (v.getYear()==1758));
         
     }
 }

@@ -4,9 +4,7 @@ public class Fish extends AbstractAnimal
 {
     public Fish(String name, int year)
     {
-        super(name,year);
-        // id=id+1;
-        // this.id=id;
+        super(name, year);
     }
 
     @Override

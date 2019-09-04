@@ -2,13 +2,14 @@ package animals;
 
 public abstract class AbstractAnimal
 {
-    // protected int id=0;
+    private static int count = 0;
+    protected int id=0;
     protected String name;
     protected int year;
 
     public AbstractAnimal(String name, int year)
     {
-        // this.id = id;
+        id = count++;
         this.name = name;
         this.year = year;
     }
@@ -32,8 +33,11 @@ public abstract class AbstractAnimal
         return year;
     }
 
-    // public int getId()
-    // {
-    //     return id;
-    // }
+    public int getId()
+    {
+        return id;
+    }
+
+    
+
 }

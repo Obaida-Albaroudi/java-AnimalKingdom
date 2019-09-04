@@ -4,9 +4,8 @@ public class Mammals extends AbstractAnimal
 {
     public Mammals(String name, int year)
     {
-        super(name,year);
-        // id=id+1;
-        // this.id=id;
+        super(name, year);
+ 
     }
 
     @Override
